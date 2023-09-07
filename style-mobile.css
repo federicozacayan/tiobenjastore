@@ -1,0 +1,221 @@
+/* mobile */
+@media screen and (max-width: 767px) {
+  /* body {
+    width: 100vw;
+  } */
+  .logo {
+    font-size: .9em;
+    color: white;
+    padding: 15px;
+    width: 100vw;
+    /* text-align: center; */
+    background-color: #103178;
+    /* background-color: white */
+    display: flex;
+    justify-content: space-between;
+  }
+  .logo h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 2em;
+    color: white;
+    /* color: #103178; */
+  }
+  .logo .button{
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column;
+    align-items: center;
+    /* padding: 20px 30px; */
+  }
+  .menu {
+    width: 100%;
+    background-color: rgb(233, 243, 255);
+    color: #103178;
+    /* color: rgb(233, 243, 255);
+    background-color: #103178; */
+    margin-bottom: 4vh;
+  }
+  .menu ul {
+    padding: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    /* border-top: 1px solid #103178; */
+    margin: 0;
+    /* box-shadow: 0 10px 10px rgba(255, 255, 255, .3); */
+  }
+  .menu ul li {
+    list-style: none;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid #6789d2;
+  }
+  .menu ul li a {
+    text-decoration: none;
+    color: #103178;
+    /* color: white; */
+    width: 100%;
+    font-size: 1em;
+  }
+  .menu ul li a:hover {
+  }
+  .hero {
+    padding: 0 4vw ;
+    display: flex;
+    flex-flow: column-reverse;
+  }
+  .hero img {
+    width: 92vw;
+    box-sizing: border-box;
+    margin-bottom: 2vh;
+
+  }
+  .jupiter-text-box {
+  }
+  .title {
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0;
+  }
+  .desc {
+    color: #ffffff;
+  }
+  .btn {
+    display: inline-block;
+    padding: 20px 50px;
+    background-color: #103178;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    max-width: 30hv;
+    font-family: 'Josefin Sans', Sans-serif;
+    font-size: 1.2em;
+    border: 0px solid #103178;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+  }
+  .btn:hover {
+  }
+
+  .offer {
+    font-size: 1.2em;
+    color: #fff;
+    display: flex;
+    flex-flow: column;
+    padding-top: 10px;
+  }
+
+  .offer .now {
+    font-size: 3em;
+  }
+
+  .offer span {
+  }
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .visualizer {
+    /* background-color: white; */
+    box-shadow: 0 0 20px rgb(77, 122, 245);
+    margin-bottom: 50px;
+    /* margin: 0  4vw; */
+    width: 90vw;
+  }
+  .miniatura {
+    background-color: rgb(191, 195, 230);
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    border-radius: 0 0 10px 10px;
+    overflow-x: scroll;
+  }
+  .miniatura div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 50px;
+    max-height: 50px;
+    background-color: white;
+  }
+  .miniatura img {
+    max-width: 50px;
+    max-height: 50px;
+    border: 2px solid white;
+    cursor: pointer;
+  }
+  .big-picture {
+    background-color: white;
+    border-radius: 10px 10px 0 0;
+    /* width: 50vw; */
+    height: 50vh;
+    display: flex;
+    /* padding: 15px; */
+  }
+  .big-picture img {
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+  }
+
+  .auriculares {
+    display: flex;
+    flex-flow: column;
+    margin: auto;
+    padding: 2vw;
+    width: 96vw;
+  }
+  .auriculares h2 {
+    margin: auto;
+    padding: 2vw;
+    color: white;
+    font-size: 2em;
+  }
+  .auriculares img {
+    max-width: 50vw;
+    max-height: 50vh;
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgb(77, 122, 245);
+  }
+  .soporte {
+    /* display: flex; */
+    /* width: 800px; */
+    margin: auto;
+    margin-top: 10vh;
+    text-align: center;
+    width: 98vw;
+  }
+  .soporte h2 {
+    margin: auto;
+    padding: 0;
+    color: white;
+    font-size: 2em;
+    margin-bottom: 2em;
+  }
+  .soporte img {
+    max-width: 80vw;
+    /* max-height: 40vh; */
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgb(77, 122, 245);
+  }
+
+  footer {
+    background-color: #103178;
+    margin-top: 15vh;
+    color: white;
+    padding: 1.5em;
+    text-align: center;
+  }
+}
