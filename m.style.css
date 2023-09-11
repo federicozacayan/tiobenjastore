@@ -11,16 +11,54 @@ body {
   padding: 0;
 }
 nav {
-  height: 120px;
-  /* background-color: red; */
-  padding: 15px 0;
+  background-color: #103178;
+  /* padding: 15px 0; */
 }
+
 nav a {
   text-decoration: none;
   color: white;
 }
-.main-menu {
-  display: none;
+.nav-right {
+  /* position: relative; */
+}
+/* mediaquery for mobile */
+
+  .nav-right .main-menu {
+    position: absolute;
+    left: 0;
+    background-color: rgb(216, 216, 216);
+    top: 62px;
+    width: 100%;
+  }
+  .nav-right .main-menu ul {
+    list-style: none;
+    display: flex;
+    flex-flow: column;
+    padding: 0;
+    margin: 0;
+  }
+  .nav-right .main-menu ul li {
+    border-bottom: 1px solid #103178;
+  }
+  .nav-right .main-menu ul li a {
+    padding: 10px;
+    color: #103178;
+    font-size: 1rem;
+    width: 100%;
+    display: block;
+    line-height: 1rem;
+  }
+
+
+.nav-right .button {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
 }
 
 .cart-btn {
@@ -45,7 +83,8 @@ nav a {
   padding: 0 30px;
 }
 .site-branding {
-  font-size: 2.5rem;
+  font-size: 2rem;
+  margin: 0;
 }
 
 .hero {
@@ -57,27 +96,28 @@ nav a {
   color: white;
   padding: 0 15px;
 }
+
 .hero h1 {
   font-size: 2rem;
   line-height: 2.5rem;
   margin-bottom: 0;
   margin: 50px 0;
 }
-.hero > .hero-info{
-  /* font-size: .8rem; */
+.hero > .hero-info {
+  display: flex;
+  flex-flow: column-reverse;
 }
 .hero > .hero-info > span {
   font-size: 1rem;
   line-height: 2rem;
   margin: 50px 0;
   /* background-color: red; */
-  height: .7rem;
+  height: 0.7rem;
   /* border-bottom: 5px solid #3a0fe6; */
   color: white;
 }
 
-
-.hero .btn{
+.hero .btn {
   padding: 20px 50px;
   background-color: #103178;
   color: white;
@@ -88,11 +128,43 @@ nav a {
   cursor: pointer;
 }
 
-.hero img{
+.hero img {
   width: 100%;
   margin-top: 30px;
   border-radius: 15px;
-  box-shadow: 0 0 20px rgba(0,0,0,.5);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.hero .offer {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  padding: 20px;
+  color: #103178;
+}
+.hero .now {
+  color: green;
+}
+.offer span {
+  display: block;
+  padding: 5px;
+}
+.offer .before {
+  text-decoration: line-through;
+  color: red;
+}
+.offer .discount {
+  display: block;
+  color: orange;
+}
+.offer .save {
+  background-color: #103178;
+  color: white;
+}
+
+.offer .shipping {
+  display: block;
+  color: #103178;
 }
 
 .details {
@@ -102,110 +174,140 @@ nav a {
   padding: 0 20px 0 0;
 }
 
-.bonus{
+.bonus {
   /* color: white; */
   text-align: center;
   background-color: white;
   padding: 30px 0;
 }
-.bonus h2{
+.bonus h2 {
   font-size: 2rem;
 }
-.bonus .soporte{
+.bonus .soporte {
   border: 1.5px solid rgb(195, 195, 195);
   margin: 15px 30px;
   border-radius: 5px;
   overflow: hidden;
+  position: relative;
 }
-.bonus .bubble{
+.bonus .bubble {
   margin-top: 50px;
   background-image: linear-gradient(90deg, #5040f4 0%, #009ffd 100%);
   padding: 30px;
   border-radius: 50% 50% 0 0;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
 }
-.bonus img{
+.bonus img {
   width: 100%;
   margin-top: 50px;
   animation: beat 3s infinite ease-in-out;
   z-index: 0;
 }
-@keyframes beat{
-  0%{
-    transform: scale(.8);
+@keyframes beat {
+  0% {
+    transform: scale(0.8);
   }
-  50%{
+  50% {
     transform: scale(1);
   }
-  100%{
-    transform: scale(.8);
+  100% {
+    transform: scale(0.8);
   }
 }
-.bonus span.old-price{
+.bonus span.old-price {
   color: rgb(255, 255, 255);
   font-size: 2rem;
-  text-decoration:  line-through;
+  text-decoration: line-through;
 }
-.bonus span.free{
+.bonus span.free {
   margin-top: 15px;
   display: block;
   color: yellow;
   font-size: 2rem;
 }
-.gift{
+.gift {
   text-align: center;
-  padding: 30px 0;
+  padding: 70px 0;
   color: white;
 }
-.gift h2{
+.gift h2 {
   font-size: 2rem;
-
 }
-.gift  svg{
-  width:50%;
+.gift svg {
+  width: 50%;
   margin-top: 30px;
   border-radius: 15px;
   font-size: 7rem;
 }
-.gift .two-colums{
+.gift .two-colums {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 30px;
+  padding: 0 30px 30px 0;
 }
-.gift .right{
+.gift .right {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: column;
   width: 50%;
 }
-.gift span.old-price{
+.gift span.old-price {
   color: red;
   /* font-size: 1.5rem;
   line-height: 2rem; */
-  text-decoration:  line-through;
+  text-decoration: line-through;
   background-color: white;
   border-radius: 15px;
-  padding: 10px 30px ;
+  padding: 10px 30px;
   margin-top: 10px;
   display: block;
 }
-.gift .free{
+.gift .free {
   display: block;
-  padding: 10px 30px ;
+  padding: 10px 30px;
   background-color: yellow;
   border-radius: 15px;
   color: red;
 }
 
-.footer{
+.footer {
   background-color: #103178;
   text-align: center;
   padding: 30px;
   color: white;
+  flex-flow: row;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer .contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: auto;
+}
+.footer .contact > div {
+  color: white;
+  background-color: green;
+  padding: 10px;
+  padding-bottom: 15px;
+  border-radius: 15px;
+}
+.footer .contact svg {
+  width: 20px;
+  height: 20px;
+  transform: translateY(5px);
+  color: white;
+}
+.footer .contact > * {
+  display: block;
 }
 
-.miniatura{
+.miniatura {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -217,7 +319,7 @@ nav a {
   background-color: #111;
 }
 
-.miniatura > div{
+.miniatura > div {
   /* width: 100vw; */
   height: 50vh;
   border-radius: 5px;
@@ -229,31 +331,43 @@ nav a {
   cursor: pointer;
   border-radius: 15px;
 }
-.miniatura > div > img{
+.miniatura > div > img {
   margin: auto;
   height: 100%;
   object-fit: contain;
   border-radius: 15px;
-  box-shadow: 0 0 20px rgba(0,0,0,.5);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
-.banner{
+.banner {
   background-color: #111;
   color: white;
   text-align: center;
+  padding: 30px;
 }
-.banner h3{
-  font-size: 1rem;
-  padding-top: 20px;
+@media screen and (max-width: 767px) {
+  .banner h3 {
+    font-size: 1rem;
+    padding: 20px;
+    margin: 0;
+  }
+  .banner div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+    box-sizing: unset;
+  }
+ 
+  .banner img {
+    width: 15%;
+    margin: 0 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  }
 }
-.banner div{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 20px;
-}
-.banner button{
+.banner button {
   background-color: #103178;
   border-radius: 5px;
   color: white;
@@ -264,22 +378,51 @@ nav a {
   animation: shine 1s infinite ease-out;
   cursor: pointer;
   font-family: 'Josefin Sans', Sans-serif;
+  height: 50px;
+  width: 100px;
 }
-@keyframes shine{
-  0%{
+@keyframes shine {
+  0% {
     box-shadow: 0 0 5px rgb(238, 255, 2);
   }
-  50%{
+  50% {
     box-shadow: 0 0 20px rgb(238, 255, 2);
     border: 2px solid rgb(238, 255, 2);
   }
-  100%{
+  100% {
     box-shadow: 0 0 5px rgb(238, 255, 2);
   }
 }
-.banner img{
-  width: 15%;
-  margin: 0 30px;
-  border-radius: 15px;
-  box-shadow: 0 0 20px rgba(0,0,0,.5);
+
+.faq {
+  background-color: white;
+  color: #103178;
+  margin: 0;
+  padding: 20px;
+}
+.faq h4 {
+  font-size: 2rem;
+  padding: 0;
+  text-align: center;
+  margin: 50px 0;
+}
+.faq ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.faq ul li {
+  border-bottom: 1px solid #e3e3e3;
+  padding: 10px 0;
+  padding: 10px 0;
+}
+/* last with no border */
+.faq ul li:last-child {
+  border-bottom: none;
+}
+
+.faq ul li p {
+  margin: 0;
+  padding-top: 10px;
 }

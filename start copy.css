@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior: auto;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+body {
+  background-color: transparent;
+  background-image: linear-gradient(90deg, #5040f4 0%, #009ffd 100%);
+  font-family: 'Josefin Sans', Sans-serif;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --navheight: 50px;
+  --padding: 15px;
+}
+
+/* nav */
+@media screen and (min-width: 992px) {
+    nav .row h3 a{
+        color: white;
+        font-size: 3rem;
+    }
+    nav .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 150px;
+        padding: 0 50px;
+    }
+    nav .row .nav-list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+    }
+    nav .row .nav-list li a{
+        color: white;
+        font-size: 1.2rem;
+        padding: 0 1rem;
+    }
+    .header-actions{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 992px) {
+  nav {
+    background-color: #103178;
+    height: var(--navheight);
+  }
+  nav .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 var(--padding);
+  }
+  nav h3 {
+    font-size: 2rem;
+  }
+  nav h3 a {
+    color: white;
+    height: var(--navheight);
+    line-height: var(--navheight);
+  }
+  nav .nav-list {
+    top: var(--navheight);
+    position: absolute;
+    flex-flow: column;
+    width: 100%;
+    background-color: #ccc;
+    list-style: none;
+    left: 0;
+  }
+  nav .nav-list li {
+    border-bottom: 1px solid #103178;
+  }
+  nav .nav-list li a {
+    display: block;
+    padding: var(--padding);
+    color: #103178;
+    font-size: 1rem;
+    width: 100%;
+    line-height: 1rem;
+  }
+  button .button {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .cart-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: darkorchid;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,127 @@
+@media screen and (min-width: 767px) {
+  nav {
+    background-color: rgba(255, 255, 255, 0);
+    background-image: linear-gradient(90deg, #5040f4 0%, #009ffd 100%);
+    /* background-image: linear-gradient(180deg, #009ffd 0%, rgba(55, 95, 227, 0) 100%); */
+    color: #103178;
+    color: white;
+    /* padding: 15px 0; */
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    /* border-bottom: 2px solid #111; */
+  }
+  .nav-right .button {
+    display: none;
+  }
+  .main-menu ul {
+    display: flex;
+    list-style: none;
+  }
+  .main-menu ul li {
+    position: relative;
+    width: 100%;
+  }
+  .main-menu ul li::before {
+    background-color: #103178;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: all 0.3s ease-in-out;
+  }
+  .main-menu ul li:hover::before {
+    transform: scaleX(1);
+  }
+  .main-menu ul li a {
+    color: #103178;
+    color: white;
+    padding: 20px;
+    line-height: 20px;
+    display: block;
+    width: 100%;
+  }
+  .site-branding a {
+    /* color: #103178; */
+  }
+  .hero{
+    padding-top: 120px;
+  }
+  .bonus{
+    padding-top: 120px;
+  }
+  .bonus .regalo{
+    display: flex;
+    /* background-color: #111; */
+    margin: 50px 250px ;
+  }
+ .soporte{
+    background-color: white;
+    min-height: 350px;
+  }
+  #auri img{
+    margin-top: -20px;
+    transform: scale(.5);
+  }
+  @keyframes beat {
+    0% {
+      transform: scale(0.3);
+    }
+    50% {
+      transform: scale(.5);
+    }
+    100% {
+      transform: scale(0.3);
+    }
+  }
+
+  .banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+    height: 90px;
+    padding: 80px 150px ;
+  }
+  .banner h3{
+    padding-right: 30px;
+}
+.banner img{
+    width: 50px;
+    border-radius: 15px;
+    margin-left: 30px;
+  }
+  .banner div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* width: 30vw; */
+  }
+  #faq #gift #carrusel{
+    margin-top: 250px;
+  }
+
+  .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
+    text-align: center;
+    color: white;
+    padding: 0 15px;
+    padding-top: 120px;
+  }
+
+  .hero > .hero-info {
+    display: flex;
+    flex-flow: row;
+  }
+  .hero h1 {
+    font-size: 3rem;
+  }
+}
+
